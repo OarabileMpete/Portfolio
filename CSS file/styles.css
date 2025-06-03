@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #42aaffbd, #4a6dd7, #42aaffbd);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.7px;
+
+}
+
+
+h1 {
+  font-size: 3vw;
+  color: rgb(0, 0, 100);
+  text-align: left;
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+
+h2 {
+  font-size: 1.3vw;
+  color: rgb(50, 50, 150);
+  text-align: left;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1vh;
+  margin-left: 5vw;
+  gap: 3vw;
+}
+
+img {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 1px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 2vw;
+  color: rgb(50, 50, 150);
+  margin: 12vh 0 0 5vw;
+  max-width: 40vw;
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 2vw;
+  margin-top: 2vh;
+  margin-left: 5vw;
+}
+
+.youtube-icon, .facebook-icon, .instagram-icon, .tiktok-icon {
+  font-size: 3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.youtube-icon { color: red; }
+.facebook-icon { color: #3b5998; }
+.instagram-icon { color: #e4405f; }
+.tiktok-icon { color: #010101; }
+
+.youtube-icon:hover,
+.facebook-icon:hover,
+.instagram-icon:hover,
+.tiktok-icon:hover {
+  transform: scale(1.2);
+}
+
+.contact-link {
+  position: relative;
+  float: right;
+  margin: 2vh 5vw 0 0;
+  font-size: 1.2vw;
+  color: navy;
+  text-decoration: none;
+  border: 2px solid navy;
+  padding: 0.5vh 1vw;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+  background: navy;
+  color: white;
+}
+
+.education-section {
+  margin: 8vh 5vw 5vh 5vw;
+  padding: 2vh 2vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid navy;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,50,0.1);
+}
+
+.subheading1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+  color: #001F54;
+  margin-bottom: 2vh;
+}
+
+.primarySchool,
+.highSchool,
+.firstYear,
+.presentDegree {
+  font-size: 1.3vw;
+  color: #003366;
+  margin-bottom: 2vh;
+  position: relative;
+  padding-left: 2vw;
+}
+
+.primarySchool::before,
+.highSchool::before,
+.firstYear::before,
+.presentDegree::before {
+  content: "●";
+  color: #4a6dd7;
+  position: absolute;
+  left: 0;
+  top: 0.1vw;
+  font-size: 1.5vw;
+}
+
+@media (max-width: 1024px) {
+  h1, .subheading1 {
+    font-size: 4vw;
+  }
+
+  h2,
+  .primarySchool,
+  .highSchool,
+  .firstYear,
+  .presentDegree,
+  p {
+    font-size: 2.5vw;
+  }
+
+  img {
+    width: 40vw;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .icon-wrapper {
+    justify-content: center;
+    margin-left: 0;
+    gap: 5vw;
+  }
+
+  .contact-link {
+    font-size: 3vw;
+    padding: 1vh 3vw;
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 2vh auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3vh 4vw;
+    border-left: 3px solid navy;
+  }
+
+  .subheading1 {
+    font-size: 6vw;
+  }
+
+  .primarySchool,
+  .highSchool,
+  .firstYear,
+  .presentDegree {
+    font-size: 4vw;
+    padding-left: 6vw;
+  }
+
+  .primarySchool::before,
+  .highSchool::before,
+  .firstYear::before,
+  .presentDegree::before {
+    font-size: 5vw;
+    left: 0;
+  }
+
+  p {
+    font-size: 4vw;
+    max-width: 90vw;
+    margin: 5vh 5vw 0 5vw;
+  }
+
+  img {
+    width: 80vw;
+  }
+
+  .youtube-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .tiktok-icon {
+    font-size: 7vw;
+  }
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 4vw;
+  letter-spacing: 2px;
+  color: navy;
+  text-shadow: 2px 2px 0 grey;
+  border-bottom: 2px solid navy;
+  display: inline-block;
+  padding-bottom: 0.3vh;
+}
