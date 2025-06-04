@@ -54,7 +54,7 @@ p {
   margin-left: 5vw;
 }
 
-.youtube-icon, .facebook-icon, .instagram-icon, .tiktok-icon {
+.youtube-icon, .facebook-icon, .instagram-icon, .tiktok-icon, .twitter-icon  {
   font-size: 3vw;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -64,11 +64,13 @@ p {
 .facebook-icon { color: #3b5998; }
 .instagram-icon { color: #e4405f; }
 .tiktok-icon { color: #010101; }
+.twitter-icon {color: lightblue;}
 
 .youtube-icon:hover,
 .facebook-icon:hover,
 .instagram-icon:hover,
-.tiktok-icon:hover {
+.tiktok-icon:hover,
+.twitter-icon:hover  {
   transform: scale(1.2);
 }
 
@@ -209,7 +211,8 @@ p {
   .youtube-icon,
   .facebook-icon,
   .instagram-icon,
-  .tiktok-icon {
+  .tiktok-icon,
+  .twitter-icon {
     font-size: 7vw;
   }
 }
@@ -223,4 +226,27 @@ h4 {
   border-bottom: 2px solid navy;
   display: inline-block;
   padding-bottom: 0.3vh;
+}
+
+/* Make the video fixed at the top and only show the center part */
+video {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  z-index: -1;
+  max-height: 100vh;
+  clip-path: inset(0% 0 0% 0); /* Show only the middle part vertically */
+  opacity: 50%;
+}
+
+/* Ensure page content appears on top */
+body {
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
