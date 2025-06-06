@@ -56,13 +56,6 @@ h2 {
   gap: 3vw;
 }
 
-img {
-  width: 20vw;
-  height: 40vh;
-  border-radius: 1px;
-  margin-top: 0;
-}
-
 p {
   font-size: 2vw;
   color: rgb(50, 50, 150);
@@ -312,7 +305,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: 9999;
   opacity: 1;
   transition: opacity 2s ease-out;
   pointer-events: none; /* allows interaction with page while video plays */
@@ -473,4 +466,99 @@ body {
   background-color: #2a417c;
   box-shadow: 0 0.2vh 0.6vh rgba(42, 65, 124, 0.9);
   transform: scale(0.95);
+}
+
+.image-flip-wrapper {
+  perspective: 1000px;
+  width: 20vw;
+  height: 40vh;
+  margin-top: 2vh;
+}
+
+.image-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.image-flip-wrapper:hover .image-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.image-front, .image-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  backface-visibility: hidden;
+}
+
+/* Front image is default */
+.image-front {
+  z-index: 2;
+}
+
+/* Back image is rotated 180° */
+.image-back {
+  transform: rotateY(180deg);
+}
+
+.tilt-paragraph {
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  perspective: 800px;
+}
+.skills-heading {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 8vh;
+  color: navy;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.skills-subheading {
+  text-align: left;
+  font-size: 2.5vw;
+  margin-top: 2vh;
+  color: #003366;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.skills-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  padding: 4vh 5vw;
+  justify-items: center;
+}
+
+.skills-gallery img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.skills-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.h2 {
+  color: navy;
+  cursor: pointer;
+  left: 4vw;
+}
+
+.navy-line {
+  border: none;
+  height: 3px;                 /* thickness of the line */
+  background-color: navy;      /* navy color */
+  box-shadow: 0 0 5px 1px white; /* subtle white glow/shadow */
+  margin: 10px 0 20px 0;       /* spacing above and below */
+  width: 100%;                 /* full width */
 }
