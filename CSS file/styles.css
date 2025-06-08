@@ -319,9 +319,21 @@ p {
     margin: 5vh 5vw 0 5vw;
   }
 
+ .img {
+  width: 80vw;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Optional: Adjust for very small screens */
+@media (max-width: 480px) {
   .img {
-    width: 80vw;
+    width: 95vw;
   }
+}
+
 
   .youtube-icon,
   .facebook-icon,
@@ -715,6 +727,24 @@ video {
 .image-flip-wrapper:hover .image-flip-inner {
   transform: rotateY(180deg);
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .image-flip-wrapper {
+    width: 60vw;
+    height: 40vh;
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-flip-inner {
+    width: 80vw;
+    height: 35vh;
+    position: inherit;
+  }
+}
+
 
 .image-front,
 .image-back {
