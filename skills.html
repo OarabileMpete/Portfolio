@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <a href="index.html" class="contact-link">Home</a>
+<head>
+  <a href="index.html" class="contact-link">Home</a>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS file/styles.css"> 
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    </head>
-    <body>
-       <video class="editing-bg" autoplay muted playsinline>
-  <source src="Assets/LauzyEditz.mp4" type="video/mp4">
-</video>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Skills</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="CSS file/styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video class="editing-bg" autoplay muted playsinline>
+    <source src="Assets/LauzyEditz.mp4" type="video/mp4">
+  </video>
 
-<h1 class="skills-heading">SKILLS</h1>
-<h2 class="skills-subheading">Drawings</h2>
-<hr class="navy-line">
-        <div class="skills-gallery">
-  
-        <img src="assets/drawing1.png" alt="Drawing 1">
+  <h1 class="skills-heading">SKILLS</h1>
+  <h2 class="skills-subheading">Drawings</h2>
+  <hr class="navy-line">
+
+  <div class="skills-gallery">
+    <img src="assets/drawing1.png" alt="Drawing 1">
         <img src="assets/drawing2.png" alt="Drawing 2">
         <img src="assets/drawing3.png" alt="Drawing 3">
         <img src="assets/drawing4.png" alt="Drawing 4">
@@ -38,11 +37,42 @@
         <img src="assets/drawing14.png" alt="Drawing 14">
         <img src="assets/drawing15.png" alt="Drawing 15">
         <img src="assets/drawing16.png" alt="Drawing 16">
-    </div>
+</div>
+   <hr class="navy-line">
+
+<h2 class="skills-subheading">Edits</h2>
+<hr class="navy-line">
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/BRII0oSlKAY"
+    title="YouTube Shorts Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
 <hr class="navy-line">
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.skills-gallery img');
 
+      images.forEach(img => {
+        img.style.cursor = 'pointer';  // show pointer on hover
+        img.addEventListener('click', () => {
+          if (img.requestFullscreen) {
+            img.requestFullscreen();
+          } else if (img.webkitRequestFullscreen) { /* Safari */
+            img.webkitRequestFullscreen();
+          } else if (img.msRequestFullscreen) { /* IE11 */
+            img.msRequestFullscreen();
+          }
+        });
+      });
+    });
+  </script>
 
-        <script src="js/script.js" async defer></script>
-    </body>
+  <script src="js/script.js" async defer></script>
+</body>
 </html>
