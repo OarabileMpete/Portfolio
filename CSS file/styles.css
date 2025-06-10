@@ -104,7 +104,7 @@ p {
 /* Icon wrapper and social icons */
 .icon-wrapper {
   display: flex;
-  gap: 2vw;
+  gap: 5vw;
   margin-top: 2vh;
   margin-left: 5vw;
 }
@@ -114,7 +114,7 @@ p {
 .instagram-icon,
 .tiktok-icon,
 .twitter-icon {
-  font-size: 3vw;
+  font-size: 8vw;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -144,7 +144,7 @@ p {
 .instagram-icon:hover,
 .tiktok-icon:hover,
 .twitter-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 /* Contact link */
@@ -270,7 +270,7 @@ p {
   }
 
   img {
-    width: 40vw;
+    width: 30vw;
     height: auto;
   }
 
@@ -734,7 +734,6 @@ video {
     width: 70vw;
     height: 50vh;
     position: relative;
-    scale: 0.5;
   }
 }
 
@@ -743,7 +742,6 @@ video {
     width: 70vw;
     height: 35vh;
     position: inherit;
-    scale: inherit;
   }
 }
 
