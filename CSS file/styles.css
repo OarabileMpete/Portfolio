@@ -230,61 +230,6 @@ p {
   color: rgb(37, 115, 188);
 }
 
-/* Responsive media queries */
-@media (max-width: 1024px) {
-  h1,
-  .subheading1 {
-    font-size: 4vw;
-  }
-
-  h2,
-  .primarySchool,
-  .highSchool,
-  .firstYear,
-  .presentDegree,
-  p {
-    font-size: 2.5vw;
-  }
-
-  img {
-    width: 30vw;
-    height: auto;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .icon-wrapper {
-    justify-content: center;
-    margin-left: 0;
-    gap: 5vw;
-  }
-
-  /* Contact link hover effect */
-  .contact-link {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .contact-link::after {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.3);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    transition: left 0.3s;
-  }
-
-  .contact-link:hover::after {
-    left: 0;
-  }
-}
-
   .youtube-icon,
   .facebook-icon,
   .instagram-icon,
@@ -780,5 +725,61 @@ video {
 
   .project-image {
     max-width: 90vw;
+  }
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  h1,
+  .subheading1 {
+    font-size: 4vw;
+  }
+
+  h2,
+  .primarySchool,
+  .highSchool,
+  .firstYear,
+  .presentDegree,
+  p {
+    font-size: 2.5vw;
+  }
+
+  img {
+    width: 30vw;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .icon-wrapper {
+    justify-content: center;
+    margin-left: 0;
+    gap: 5vw;
+  }
+
+  /* Contact link hover effect */
+  .contact-link {
+    position: relative;
+    overflow: hidden;
+    size: 4vw;
+  }
+
+  .contact-link::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s;
+  }
+
+  .contact-link:hover::after {
+    left: 0;
   }
 }
