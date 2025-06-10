@@ -82,10 +82,10 @@ h3 {
 
 /* Paragraphs */
 p {
-  font-size: 2vw;
+  font-size: 4vw;
   color: rgb(50, 50, 150);
   margin: 12vh 0 0 5vw;
-  max-width: 40vw;
+  max-width: 60vw;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
 }
