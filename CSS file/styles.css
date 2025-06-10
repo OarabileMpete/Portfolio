@@ -287,7 +287,7 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .education-section {
     padding: 3vh 4vw;
     border-left: 3px solid navy;
@@ -325,7 +325,7 @@ p {
   height: auto;
   display: block;
   margin: 0 auto;
-}
+}*/
 
 /* Optional: Adjust for very small screens */
 @media (max-width: 480px) {
@@ -347,7 +347,7 @@ p {
     font-size: 4vw;
     padding: 6vh 6vw;
   }
-}
+
 
 /* Headings and lines */
 h4 {
@@ -518,38 +518,19 @@ video {
 }
 
 /* Optional: hover effect */
-.project-card1:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
-}
-
-.project-card2:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
-}
-
-.project-card3:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
-}
-
-.project-card4:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
-}
-
-.project-card5:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
-}
-
+.project-card1:hover,
+.project-card2:hover,
+.project-card3:hover,
+.project-card4:hover,
+.project-card5:hover,
 .project-card6:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
 }
 
+
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card1 {
     max-width: 90%;
     padding: 2vw;
@@ -557,7 +538,7 @@ video {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card2 {
     max-width: 90%;
     padding: 2vw;
@@ -565,7 +546,7 @@ video {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card3 {
     max-width: 90%;
     padding: 2vw;
@@ -573,7 +554,7 @@ video {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card4 {
     max-width: 90%;
     padding: 2vw;
@@ -581,7 +562,7 @@ video {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card5 {
     max-width: 90%;
     padding: 2vw;
@@ -589,12 +570,12 @@ video {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-card6 {
     max-width: 90%;
     padding: 2vw;
   }
-}
+}*/
 
 .project-image {
   width: 100%;           /* Fill the width of the project card */
@@ -607,11 +588,11 @@ video {
 }
 
 /* Responsive adjustment */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .project-image {
     max-width: 90vw;     /* Scale nicely on small screens */
-  }
-}
+/*  }
+}*/
 
 .project-card1 img {
   width: 100%;
@@ -729,13 +710,13 @@ video {
 }
 
 /* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .image-flip-wrapper {
     width: 70vw;
     height: 24vh;
     position: relative;
   }
-}
+}*/
 
 @media (max-width: 480px) {
   .image-flip-inner {
@@ -816,7 +797,7 @@ video {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .skills-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -826,7 +807,7 @@ video {
   .skills-gallery img {
     max-width: 100%;
   }
-}
+}*/
 
 .skills-gallery img {
   width: 100%;
@@ -841,7 +822,7 @@ video {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .skills-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -960,4 +941,84 @@ body.dark-theme {
 #themeToggle.dark-mode-on {
   background-color: #333;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3vh 4vw;
+    border-left: 3px solid navy;
+  }
+
+  .subheading1 {
+    font-size: 6vw;
+  }
+
+  .primarySchool,
+  .highSchool,
+  .firstYear,
+  .presentDegree {
+    font-size: 4vw;
+    padding-left: 6vw;
+  }
+
+  .primarySchool::before,
+  .highSchool::before,
+  .firstYear::before,
+  .presentDegree::before {
+    font-size: 5vw;
+    left: 0;
+  }
+
+  p {
+    font-size: 4vw;
+    max-width: 90vw;
+    margin: 5vh 5vw 0 5vw;
+  }
+
+  img {
+    width: 80vw;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .youtube-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .tiktok-icon,
+  .twitter-icon {
+    font-size: 7vw;
+  }
+
+  .container2 {
+    font-size: 4vw;
+    padding: 6vh 6vw;
+  }
+
+  .project-card1,
+  .project-card2,
+  .project-card3,
+  .project-card4,
+  .project-card5,
+  .project-card6 {
+    max-width: 90%;
+    padding: 2vw;
+  }
+
+  .image-flip-wrapper {
+    width: 70vw;
+    height: 24vh;
+    position: relative;
+  }
+
+  .image-flip-inner {
+    width: 70vw;
+    height: 35vh;
+    position: inherit;
+  }
+
+  .project-image {
+    max-width: 90vw;
+  }
 }
