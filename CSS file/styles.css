@@ -152,7 +152,7 @@ p {
   position: relative;
   float: right;
   margin: 2vh 5vw 0 0;
-  font-size: 1.2vw;
+  font-size: 2.5vw;
   color: navy;
   text-decoration: none;
   border: 2px solid navy;
@@ -287,53 +287,12 @@ p {
   }
 }
 
-/*@media (max-width: 768px) {
-  .education-section {
-    padding: 3vh 4vw;
-    border-left: 3px solid navy;
-  }
-
-  .subheading1 {
-    font-size: 6vw;
-  }
-
-  .primarySchool,
-  .highSchool,
-  .firstYear,
-  .presentDegree {
-    font-size: 4vw;
-    padding-left: 6vw;
-  }
-
-  .primarySchool::before,
-  .highSchool::before,
-  .firstYear::before,
-  .presentDegree::before {
-    font-size: 5vw;
-    left: 0;
-  }
-
-  .p {
-    font-size: 4vw;
-    max-width: 90vw;
-    margin: 5vh 5vw 0 5vw;
-  }
-
- .img {
-  width: 80vw;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}*/
-
 /* Optional: Adjust for very small screens */
 @media (max-width: 480px) {
   .img {
     width: 95vw;
   }
 }
-
 
   .youtube-icon,
   .facebook-icon,
@@ -347,7 +306,6 @@ p {
     font-size: 4vw;
     padding: 6vh 6vw;
   }
-
 
 /* Headings and lines */
 h4 {
@@ -528,55 +486,6 @@ video {
   box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
 }
 
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card1 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card2 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card3 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card4 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card5 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}
-
-/* Responsive behavior */
-/*@media (max-width: 768px) {
-  .project-card6 {
-    max-width: 90%;
-    padding: 2vw;
-  }
-}*/
-
 .project-image {
   width: 100%;           /* Fill the width of the project card */
   height: auto;          /* Maintain aspect ratio */
@@ -586,13 +495,6 @@ video {
   border-radius: 12px;   /* Optional, matches card */
   object-fit: cover;     /* Crop if needed to fill */
 }
-
-/* Responsive adjustment */
-/*@media (max-width: 768px) {
-  .project-image {
-    max-width: 90vw;     /* Scale nicely on small screens */
-/*  }
-}*/
 
 .project-card1 img {
   width: 100%;
@@ -709,15 +611,6 @@ video {
   transform: rotateY(180deg);
 }
 
-/* Responsive adjustments for mobile devices */
-/*@media (max-width: 768px) {
-  .image-flip-wrapper {
-    width: 70vw;
-    height: 24vh;
-    position: relative;
-  }
-}*/
-
 @media (max-width: 480px) {
   .image-flip-inner {
     width: 70vw;
@@ -797,18 +690,6 @@ video {
   transform: scale(1.05);
 }
 
-/*@media (max-width: 768px) {
-  .skills-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 1vh 2vw;
-  }
-  
-  .skills-gallery img {
-    max-width: 100%;
-  }
-}*/
-
 .skills-gallery img {
   width: 100%;
   max-width: 200px;
@@ -820,18 +701,6 @@ video {
 
 .skills-gallery img:hover {
   transform: scale(1.05);
-}
-
-/*@media (max-width: 768px) {
-  .skills-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 1vh 2vw;
-  }
-  
-  .skills-gallery img {
-    max-width: 100%;
-  }
 }
 
 /* Fullscreen overlay container */
