@@ -765,7 +765,7 @@ video {
   .contact-link {
     position: relative;
     overflow: hidden;
-    size: 4vw;
+    font-size: 2.4vw;
   }
 
   .contact-link::after {
