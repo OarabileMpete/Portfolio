@@ -732,7 +732,7 @@ video {
 @media (max-width: 768px) {
   .image-flip-wrapper {
     width: 70vw;
-    height: 50vh;
+    height: 24vh;
     position: relative;
   }
 }
