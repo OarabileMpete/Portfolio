@@ -726,6 +726,10 @@ video {
   .project-image {
     max-width: 90vw;
   }
+ 
+.theme-toggle-btn {
+  font-size: medium;
+}
 }
 
 /* Responsive media queries */
