@@ -1,19 +1,3 @@
-// VIDEO HANDLING
-const video = document.querySelector('.editing-bg');
-
-if (video) {
-  video.addEventListener("loadedmetadata", () => {
-    video.playbackRate = 3;
-  });
-
-  video.addEventListener("ended", () => {
-    video.style.opacity = 0;
-    setTimeout(() => {
-      video.remove();
-    }, 2000);
-  });
-}
-
 // THEME HANDLING - apply saved theme on all pages
 const body = document.body;
 const savedTheme = localStorage.getItem('theme');
@@ -67,43 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       tiltElement.style.transform = 'rotateX(0deg) rotateY(0deg)';
     });
   }
-});
-
-// VIDEO PLAY ON SKILLS LINK CLICK
-window.addEventListener('DOMContentLoaded', () => {
-  const video = document.querySelector('video.editing-bg');
-  if (!video) return;
-
-  video.pause();
-
-  const skillsButton = document.querySelector('.contact-link[href="skills.html"], #skillsButton');
-
-  if (skillsButton) {
-    skillsButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      video.play();
-      // Optional: redirect after play
-      // window.location.href = skillsButton.href;
-    });
-  }
-});
-
-// MAKE SKILLS IMAGES FULLSCREEN ON CLICK & MOBILE FRIENDLY
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.skills-gallery img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.style.touchAction = 'manipulation';
-
-    img.addEventListener('click', () => {
-      if (img.requestFullscreen) {
-        img.requestFullscreen();
-      } else if (img.webkitRequestFullscreen) {
-        img.webkitRequestFullscreen();
-      } else if (img.msRequestFullscreen) {
-        img.msRequestFullscreen();
-      }
-    });
-  });
 });
 
 // FULLSCREEN IMAGE GALLERY WITH NAVIGATION

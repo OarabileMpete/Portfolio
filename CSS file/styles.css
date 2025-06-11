@@ -39,6 +39,9 @@ h1 {
   text-align: left;
   margin-top: 5vh;
   margin-left: 5vw;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h2 {
@@ -47,12 +50,29 @@ h2 {
   text-align: left;
   margin-left: 5vw;
   margin-top: 1vh;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h3 {
   font-size: 1.7vw;
   color: rgb(50, 50, 150);
   text-align: center;
+}
+
+/* Headings and lines */
+h4 {
+  font-size: 3vw;
+  letter-spacing: 2px;
+  color: navy;
+  text-align: center;
+  text-shadow: 1px 2px 0 rgb(46, 158, 255);
+  border-bottom: 2px solid navy;
+  padding-bottom: 0.3vh;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .project-heading {
@@ -82,7 +102,7 @@ h3 {
 
 /* Paragraphs */
 p {
-  font-size: 4vw;
+  font-size: 2vw;
   color: rgb(50, 50, 150);
   margin: 12vh 0 0 5vw;
   max-width: 60vw;
@@ -92,13 +112,17 @@ p {
 
 .container2 p {
   margin-bottom: 2.5vh;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container2 p:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  transition-duration: 2s;
 }
 
 /* Icon wrapper and social icons */
@@ -109,15 +133,22 @@ p {
   margin-left: 5vw;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* optional spacing between icons */
+}
+
 .youtube-icon,
 .facebook-icon,
 .instagram-icon,
 .tiktok-icon,
 .twitter-icon {
-  font-size: 8vw;
+  font-size: 5vw;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 
 .youtube-icon {
   color: red;
@@ -221,39 +252,10 @@ p {
   font-size: 1.5vw;
 }
 
-.subheading1:hover,
-.primarySchool:hover,
-.highSchool:hover,
-.firstYear:hover,
-.presentDegree:hover {
-  transform: scale(1.03);
-  color: rgb(37, 115, 188);
-}
-
-  .youtube-icon,
-  .facebook-icon,
-  .instagram-icon,
-  .tiktok-icon,
-  .twitter-icon {
-    font-size: 7vw;
-  }
-
   .container2 {
     font-size: 4vw;
     padding: 6vh 6vw;
   }
-
-/* Headings and lines */
-h4 {
-  text-transform: uppercase;
-  font-size: 4vw;
-  letter-spacing: 2px;
-  color: navy;
-  text-shadow: 2px 2px 0 grey;
-  border-bottom: 2px solid navy;
-  display: inline-block;
-  padding-bottom: 0.3vh;
-}
 
 /* Video styling */
 video {
@@ -283,20 +285,6 @@ video {
   padding: 15px;
   border-radius: 8px;
   background-color: #f7f7f7;
-}
-
-/* Editing background */
-.editing-bg {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 2s ease-out;
-  pointer-events: none;
 }
 
 /* Container 2 styling */
@@ -483,9 +471,13 @@ video {
 
 /* Tilt paragraph */
 .tilt-paragraph {
+  font-size: 2.5vw;
   transition: transform 0.2s ease;
   transform-style: preserve-3d;
   will-change: transform;
+  font-family: "Skranji", system-ui;
+  font-weight: 10;
+  font-style: italic
 }
 
 /* Skills section */
@@ -643,7 +635,7 @@ video {
   .instagram-icon,
   .tiktok-icon,
   .twitter-icon {
-    font-size: 7vw;
+    font-size: 8vw;
   }
 }
 
