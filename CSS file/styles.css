@@ -49,7 +49,6 @@ h2 {
   color: rgb(50, 50, 150);
   text-align: left;
   margin-left: 5vw;
-  margin-top: 1vh;
   font-family: "Skranji", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -59,6 +58,9 @@ h3 {
   font-size: 1.7vw;
   color: rgb(50, 50, 150);
   text-align: center;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Headings and lines */
@@ -67,7 +69,7 @@ h4 {
   letter-spacing: 2px;
   color: navy;
   text-align: center;
-  text-shadow: 1px 2px 0 rgb(46, 158, 255);
+  text-shadow: 1px 2px 0 rgb(0, 78, 147);
   border-bottom: 2px solid navy;
   padding-bottom: 0.3vh;
   font-family: "Skranji", system-ui;
@@ -80,6 +82,9 @@ h4 {
   margin-bottom: 1vh; /* space below */
   color: navy;        /* change color */
   font-weight: bold;  /* make it bold */
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .description {
@@ -87,6 +92,9 @@ h4 {
   margin-left: auto;
   font-size: 1.2rem;
   color: rgb(0, 4, 122);
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -108,21 +116,9 @@ p {
   max-width: 60vw;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
-}
-
-.container2 p {
-  margin-bottom: 2.5vh;
   font-family: "Skranji", system-ui;
   font-weight: 400;
   font-style: normal;
-}
-
-.container2 p:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  transition-duration: 2s;
 }
 
 /* Icon wrapper and social icons */
@@ -184,6 +180,9 @@ p {
   float: right;
   margin: 2vh 5vw 0 0;
   font-size: 1.2vw;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
   color: navy;
   text-decoration: none;
   border: 2px solid navy;
@@ -193,10 +192,36 @@ p {
   overflow: visible;
 }
 
-.contact-link:hover {
-  background: navy;
-  color: white;
+.contact-link::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 106, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease;
+  pointer-events: none; /* so it doesn't block clicks */
+  opacity: 0; /* start invisible */
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.contact-link:hover::after {
+  left: 0;
+  opacity: 1; /* show when hovered */
+}
+
+  .email-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .email-link:hover {
+    text-decoration: underline;
+  }
 
 /* Education section */
 .education-section {
@@ -209,7 +234,58 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-origin: center;
   will-change: transform;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.education-section.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  /* you already have transform:none !important, so you can remove the first transform */
+  width: 80vw;
+  height: 80vh;
+  z-index: 1001;
+  overflow: auto;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.education-section.fullscreen:hover,
+.education-section.fullscreen:hover * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Backdrop blur for everything else */
+body.modal-active > *:not(.education-section) {
+  filter: blur(15px);
+  pointer-events: none;
+  user-select: none;
+}
+
+body.modal-active::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* soft dark backdrop */
+  z-index: 1000;
+}
+
 
 .education-section:hover {
   transform: scale(1.05);
@@ -219,7 +295,9 @@ p {
 /* Subheadings */
 .subheading1 {
   font-size: 2.5vw;
-  font-weight: 600;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
   color: #001F54;
   margin-bottom: 2vh;
   cursor: pointer;
@@ -250,12 +328,7 @@ p {
   left: 0;
   top: 0.1vw;
   font-size: 1.5vw;
-}
-
-  .container2 {
-    font-size: 4vw;
-    padding: 6vh 6vw;
-  }
+}  
 
 /* Video styling */
 video {
@@ -300,9 +373,11 @@ video {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   animation: fadeIn 1.2s ease-in-out;
   color: #001F3F;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
+  font-family: "Skranji", system-ui;
+  font-weight: 10;
+  font-style: normal;
   line-height: 1.8;
-  font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -343,17 +418,6 @@ video {
   aspect-ratio: 16 / 9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
-}
-
-/* Optional: hover effect */
-.project-card1:hover,
-.project-card2:hover,
-.project-card3:hover,
-.project-card4:hover,
-.project-card5:hover,
-.project-card6:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 50, 0.2);
 }
 
 .project-image {
@@ -471,7 +535,7 @@ video {
 
 /* Tilt paragraph */
 .tilt-paragraph {
-  font-size: 2.5vw;
+  font-size: 2vw;
   transition: transform 0.2s ease;
   transform-style: preserve-3d;
   will-change: transform;
@@ -486,15 +550,19 @@ video {
   font-size: 4vw;
   margin-top: 8vh;
   color: navy;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .skills-subheading {
   text-align: left;
   font-size: 2.5vw;
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 2vh;
   color: #003366;
-  font-family: 'Bebas Neue', sans-serif;
 }
 
 .skills-gallery {
@@ -620,6 +688,32 @@ video {
   color: #fff;
 }
 
+/* Base state */
+.education-section {
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.phone-number{
+margin-bottom: 4vw;
+}
+
+.cv-link {
+    padding: 11px 20px;
+    font-size: 1.5vw;
+    background-color: #00C4CC;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  .cv-link:hover {
+    background-color: #009ba1;
+  }
+
 @media (max-width: 480px) {
   .image-flip-inner {
     width: 70vw;
@@ -637,6 +731,12 @@ video {
   .twitter-icon {
     font-size: 8vw;
   }
+  @media (max-width: 480px) {
+  .education-section.fullscreen {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
 }
 
 
@@ -721,6 +821,15 @@ video {
  
 .theme-toggle-btn {
   font-size: 2.8vw;
+}
+
+@media (max-width: 768px) {
+  .education-section.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
 }
 }
 

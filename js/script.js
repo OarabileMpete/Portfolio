@@ -124,3 +124,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const edu = document.querySelector('.education-section');
+
+// Toggle fullscreen on click of edu
+edu.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent event bubbling to document click
+  edu.classList.toggle('fullscreen');
+  document.body.classList.toggle('modal-active');
+});
+
+// Clicking anywhere else on the document closes fullscreen if open
+document.addEventListener('click', () => {
+  if (edu.classList.contains('fullscreen')) {
+    edu.classList.remove('fullscreen');
+    document.body.classList.remove('modal-active');
+  }
+});
+
+// Optional: ESC key closes fullscreen
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    edu.classList.remove('fullscreen');
+    document.body.classList.remove('modal-active');
+  }
+});
+
+    const paragraph = document.getElementById("fullscreen-paragraph");
+
+    paragraph.addEventListener("click", () => {
+      const fullscreenPara = paragraph.cloneNode(true);
+      fullscreenPara.classList.add("fullscreen");
+
+      const closeBtn = document.createElement("div");
+      closeBtn.classList.add("close-btn");
+      closeBtn.textContent = "×";
+      closeBtn.addEventListener("click", () => {
+        document.body.removeChild(fullscreenPara);
+      });
+
+      fullscreenPara.appendChild(closeBtn);
+      document.body.appendChild(fullscreenPara);
+    });
