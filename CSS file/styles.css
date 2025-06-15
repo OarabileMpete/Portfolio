@@ -213,6 +213,18 @@ p {
   opacity: 1; /* show when hovered */
 }
 
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;           /* Behind all content */
+  opacity: 0.5;          /* 50% transparency */
+  pointer-events: none;  /* Click-through so it doesn't block interactions */
+}
+
   .email-link {
     color: #007BFF;
     text-decoration: none;
@@ -330,22 +342,6 @@ body.modal-active::before {
   font-size: 1.5vw;
 }  
 
-/* Video styling */
-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  z-index: -1;
-  max-height: 100vh;
-  clip-path: inset(0% 0 0% 0);
-  opacity: 50%;
-}
-
 /* Editing gallery */
 .editing-gallery {
   display: grid;
@@ -407,63 +403,30 @@ video {
 .project-card3,
 .project-card4,
 .project-card5,
-.project-card6
-{
+.project-card6 {
+  width: 100%;
+  max-width: 320px;   /* limits card size */
   background-color: rgba(255, 255, 255, 0.15);
   border-left: 5px solid navy;
   border-radius: 12px;
   padding: 1vw;
-  width: 100%;
-  max-width: 320px; /* smaller size */
-  aspect-ratio: 16 / 9;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
 }
 
-.project-image {
-  width: 100%;           /* Fill the width of the project card */
-  height: auto;          /* Maintain aspect ratio */
-  aspect-ratio: 16 / 9;  /* Keep the 16:9 ratio */
-  max-width: 280px;      /* Make it smaller than original */
-  display: block;
-  border-radius: 12px;   /* Optional, matches card */
-  object-fit: cover;     /* Crop if needed to fill */
-}
-
-.project-card1 img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+.project-card1 video,
+.project-card2 video,
+.project-card3 video,
+.project-card4 video,
+.project-card5 video,
+.project-card6 video {
+   width: 100%;            /* fills the card's width */
+  height: auto;           /* keep aspect ratio */
+  margin-left: 27vw;
+  border-radius: 12px;
+  object-fit: cover;
   display: block;
   margin: 0 auto;
-  border-radius: 1vw;
-  object-fit: cover;
-  object-position: bottom;
-}
-
-.project-card2 img,
-.project-card3 img,
-.project-card4 img,
-.project-card5 img {
-  width: 100%;
-  height: auto;
   aspect-ratio: 16 / 9;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1vw;
-  object-fit: cover;
-  object-position: center; /* default: center the image */
-}
-
-.project-card6 img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1vw;
-  object-fit: cover;
-  object-position: top; /* default: center the image */
 }
 
 /* Theme toggle button */
