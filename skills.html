@@ -56,6 +56,7 @@
 
   <div class="video-container" data-src="https://www.youtube.com/embed/03CosjwCqCQ">
     <iframe
+    id="player2"
       src="https://www.youtube.com/embed/03CosjwCqCQ"
       allow="autoplay; encrypted-media"
       frameborder="0"
@@ -77,27 +78,47 @@
       frameborder="0"
       allowfullscreen></iframe>
   </div>
+
+  <div class="video-container" data-src="https://www.youtube.com/embed/EQH7eWfpKRc">
+  <iframe
+    src="https://www.youtube.com/embed/EQH7eWfpKRc"
+    allow="autoplay; encrypted-media"
+    frameborder="0"
+    allowfullscreen></iframe>
 </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const images = document.querySelectorAll('.skills-gallery img');
+<div class="video-container" data-src="https://www.youtube.com/embed/WAs3HPd9FBI">
+  <iframe
+    src="https://www.youtube.com/embed/WAs3HPd9FBI"
+    allow="autoplay; encrypted-media"
+    frameborder="0"
+    allowfullscreen></iframe>
+</div>
+<div class="video-container" data-src="https://www.youtube.com/embed/flDP2UWpeHA">
+  <iframe
+    src="https://www.youtube.com/embed/flDP2UWpeHA"
+    allow="autoplay; encrypted-media"
+    frameborder="0"
+    allowfullscreen></iframe>
+</div>
 
-      images.forEach(img => {
-        img.style.cursor = 'pointer';  // show pointer on hover
-        img.addEventListener('click', () => {
-          if (img.requestFullscreen) {
-            img.requestFullscreen();
-          } else if (img.webkitRequestFullscreen) { /* Safari */
-            img.webkitRequestFullscreen();
-          } else if (img.msRequestFullscreen) { /* IE11 */
-            img.msRequestFullscreen();
-          }
-        });
-      });
-    });
-  </script>
+<div class="video-container" data-src="https://www.youtube.com/embed/BCdcdXn_AZ8">
+  <iframe
+    src="https://www.youtube.com/embed/BCdcdXn_AZ8"
+    allow="autoplay; encrypted-media"
+    frameborder="0"
+    allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="fullscreen-fallback" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; justify-content:center; align-items:center; z-index:10000; flex-direction: column;">
+  <img id="fallback-image" src="" style="max-width:90vw; max-height:90vh;">
+  <button id="fallback-close" style="position:absolute; top:20px; right:20px; font-size:30px; color:#fff; background:none; border:none; cursor:pointer;">×</button>
+  <button id="fallback-prev" aria-label="Previous image" style="position:absolute; top:50%; left:20px; font-size:40px; color:#fff; background:none; border:none; cursor:pointer; user-select:none;">‹</button>
+  <button id="fallback-next" aria-label="Next image" style="position:absolute; top:50%; right:20px; font-size:40px; color:#fff; background:none; border:none; cursor:pointer; user-select:none;">›</button>
+</div>
 
   <script src="js/script.js" async defer></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
