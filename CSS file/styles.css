@@ -974,7 +974,7 @@ body.modal-active::before {
 
     .video-container {
     width: 35vw;
-    height: 30vh;
+    height: 20vh;
   }
 }
 
@@ -987,18 +987,13 @@ body.modal-active::before {
   }
 
   .video-container {
-    width: 90vw;
-    height: 30vh;
+    width: 50vw;
+    height: 25vh;
   }
 
   .education-section.fullscreen {
     padding: 1rem;
     font-size: 0.45rem;
-  }
-
-  .video-container {
-    width: 30vw;
-    height: 350vh;
   }
 
   .skills-gallery {
