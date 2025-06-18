@@ -8,7 +8,7 @@ body {
   z-index: 1;
 }
 
-/* Dark Theme */
+/* Dark Theme properties*/
 body.dark-theme {
   background: #121212;
   color: #eeeeee;
@@ -78,10 +78,10 @@ h4 {
 }
 
 .project-heading {
-  margin:auto;   /* move left */
-  margin-bottom: 1vh; /* space below */
-  color: navy;        /* change color */
-  font-weight: bold;  /* make it bold */
+  margin:auto;
+  margin-bottom: 1vh; /* The amount of space below the project heading */
+  color: navy;        /*The color of the text*/
+  font-weight: bold;  /* Makes it bold */
   font-family: "Skranji", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -98,7 +98,7 @@ h4 {
 }
 
 
-/* Container */
+/* Container properties*/
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -132,9 +132,9 @@ p {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px; /* optional spacing between icons */
+  gap: 20px; /* The amount of space between the icons */
 }
-
+ /* The icons in contact page*/
 .youtube-icon,
 .facebook-icon,
 .instagram-icon,
@@ -145,7 +145,7 @@ p {
   transition: transform 0.3s ease;
 }
 
-
+/* The color of the icons*/
 .youtube-icon {
   color: red;
 }
@@ -165,7 +165,7 @@ p {
 .twitter-icon {
   color: lightblue;
 }
-
+/* The animation that the icons have when one hovers over them*/
 .youtube-icon:hover,
 .facebook-icon:hover,
 .instagram-icon:hover,
@@ -201,8 +201,8 @@ p {
   top: 0;
   left: -100%;
   transition: left 0.3s ease;
-  pointer-events: none; /* so it doesn't block clicks */
-  opacity: 0; /* start invisible */
+  pointer-events: none;
+  opacity: 0; /* starts invisible */
   font-family: "Skranji", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -210,7 +210,7 @@ p {
 
 .contact-link:hover::after {
   left: 0;
-  opacity: 1; /* show when hovered */
+  opacity: 1; /* It shows when hovered on */
 }
 
 .video-background {
@@ -220,9 +220,9 @@ p {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;           /* Behind all content */
-  opacity: 0.5;          /* 50% transparency */
-  pointer-events: none;  /* Click-through so it doesn't block interactions */
+  z-index: -1;           /* The background video is behind all content in the page */
+  opacity: 0.5;          /* 50% transparency for the video */
+  pointer-events: none; 
 }
 
   .email-link {
@@ -235,7 +235,7 @@ p {
     text-decoration: underline;
   }
 
-/* Education section */
+/* Education section properties */
 .education-section {
   margin: 8vh 5vw 5vh 5vw;
   padding: 2vh 2vw;
@@ -251,12 +251,11 @@ p {
   font-style: normal;
   z-index: 1;
 }
-
+ /* Education section properties when it is in fullscreen*/
 .education-section.fullscreen {
   position: fixed;
   top: 50%;
   left: 0%;
-  /* you already have transform:none !important, so you can remove the first transform */
   width: 80vw;
   height: 80vh;
   z-index: 1001;
@@ -271,7 +270,7 @@ p {
   font-style: normal;
 }
 
-
+/* Education section should have no hover effects when it is in fullscreen*/
 .education-section.fullscreen:hover,
 .education-section.fullscreen:hover * {
   animation: none !important;
@@ -305,7 +304,7 @@ body.modal-active::before {
   box-shadow: 0 8px 20px rgba(0, 0, 80, 0.25);
 }
 
-/* Subheadings */
+/* Subheading properties */
 .subheading1 {
   font-size: 2.5vw;
   font-family: "Skranji", system-ui;
@@ -317,7 +316,7 @@ body.modal-active::before {
   transition: transform 0.3s ease;
 }
 
-/* Education entries */
+/* Education phases */
 .primarySchool,
 .highSchool,
 .firstYear,
@@ -343,7 +342,7 @@ body.modal-active::before {
   font-size: 1.5vw;
 }  
 
-/* Editing gallery */
+/* Editing gallery properties */
 .editing-gallery {
   display: grid;
   gap: 20px;
@@ -378,7 +377,7 @@ body.modal-active::before {
   letter-spacing: 0.5px;
 }
 
-/* Project gallery */
+/* Project gallery styling */
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -408,8 +407,8 @@ body.modal-active::before {
 .project-card4 video,
 .project-card5 video,
 .project-card6 video {
-   width: 100%;            /* fills the card's width */
-  height: auto;           /* keep aspect ratio */
+   width: 100%;            /* The video fills the card's width */
+  height: auto;           /* It keeps the aspect ratio */
   margin-left: 27vw;
   border-radius: 12px;
   object-fit: cover;
@@ -418,7 +417,7 @@ body.modal-active::before {
   aspect-ratio: 16 / 9;
 }
 
-/* Theme toggle button */
+/* Theme toggle button styling */
 .theme-toggle-btn {
   position: fixed;
   top: 1vh;
@@ -466,7 +465,7 @@ body.modal-active::before {
 .image-flip-wrapper:hover .image-flip-inner {
   transform: rotateY(180deg);
 }
-
+/*Front and back image styling*/
 .image-front,
 .image-back {
   position: absolute;
@@ -485,7 +484,7 @@ body.modal-active::before {
   transform: rotateY(180deg);
 }
 
-/* Tilt paragraph */
+/* Tilt paragraph styling */
 .tilt-paragraph {
   font-size: 2vw;
   transition: transform 0.2s ease;
@@ -496,7 +495,7 @@ body.modal-active::before {
   font-style: italic
 }
 
-/* Skills section */
+/* Skills section styling */
 .skills-heading {
   text-align: center;
   font-size: 4vw;
@@ -530,7 +529,7 @@ body.modal-active::before {
   max-width: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  cursor: pointer; /* added for UX */
+  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
@@ -538,7 +537,7 @@ body.modal-active::before {
   transform: scale(1.05);
 }
 
-/* Fullscreen overlay container */
+/* Fullscreen overlay container styling */
 #fullscreen-overlay {
   display: none;
   position: fixed;
@@ -593,7 +592,7 @@ body.modal-active::before {
   color: #ccc;
 }
 
-/* Fullscreen image */
+/* Fullscreen image styling */
 #fullscreen-image {
   max-width: 90vw;
   max-height: 90vh;
@@ -621,27 +620,27 @@ body.modal-active::before {
 .video-container {
   width: 15vw;          
   height: 45vh;         
-  margin: 1vh 0 1vh 7vw;  /* top 1vh, right 0, bottom 1vh, left 5vw */
+  margin: 1vh 0 1vh 7vw;
   overflow: hidden;
   border-radius: 0.5vw;
   box-shadow: 0 0.25vw 0.5vw rgba(0,0,0,0.15);
 }
 
-/* Optional: style for button in dark mode */
+/* style for button in dark mode */
 #themeToggle.dark-mode-on {
   background-color: #333;
   color: #fff;
 }
-
+/*phone number styling*/
 .phone-number {
-  margin-bottom: 4vw; /* default for large screens */
+  margin-bottom: 4vw;
   font-size: 2.3vw;
 }
 
 .video-row {
   display: flex;
-  gap: 20px; /* space between videos */
-  justify-content: center; /* center the row */
+  gap: 20px; /* The space between the videos */
+  justify-content: center; /* Centers the row */
   align-items: flex-start;
 }
 
@@ -699,7 +698,7 @@ body.modal-active::before {
 
   .image-front,
   .image-back {
-    width: 30vw;   /* bigger relative width for smaller laptop/tablet */
+    width: 30vw;
     height: 40vh;
     border-radius: 3px;
   }
@@ -770,7 +769,7 @@ body.modal-active::before {
   }
 
     .tilt-paragraph {
-        font-size: 3.5vw; /* or any size that fits better on smaller screens */
+        font-size: 3.5vw; 
     }
 
       .video-container {
@@ -791,7 +790,7 @@ body.modal-active::before {
   }
 }
 
-/* Small tablets and large phones */
+/* Styling for small tablets and large phones */
 @media (max-width: 768px) {
   .phone-number {
     font-size: 3.5vw;
@@ -908,7 +907,7 @@ body.modal-active::before {
   }
 }
 
-/* Regular smartphones */
+/* Styling fir regular smartphones */
 @media (max-width: 600px) {
   .phone-number {
     font-size: 4.5vw;
@@ -972,14 +971,19 @@ body.modal-active::before {
     padding: 1rem;
     font-size: 0.75rem;
   }
+
+    .video-container {
+    width: 35vw;
+    height: 30vh;
+  }
 }
 
 /* Responsive for very small screens */
 @media (max-width: 400px) {
   .video-row {
-    flex-direction: column; /* Stack videos vertically */
-    align-items: center;    /* Center items */
-    gap: 10px;              /* Reduce gap for tight screens */
+    flex-direction: column; /* Stacks videos vertically */
+    align-items: center;    /* Centers items */
+    gap: 10px;              /* Reduces gap for tight screens */
   }
 
   .video-container {
@@ -994,17 +998,17 @@ body.modal-active::before {
 
   .video-container {
     width: 30vw;
-    height: 40vh;
+    height: 350vh;
   }
 
   .skills-gallery {
-    padding: 2vh 3vw; /* reduce padding */
+    padding: 2vh 3vw;
     gap: 3vw;
   }
 
   .skills-gallery img {
     max-width: 100%;
-    border-radius: 6px; /* slightly smaller corners */
+    border-radius: 6px;
   }
 
   .phone-number {
